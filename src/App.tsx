@@ -1,15 +1,24 @@
 import './App.css';
-import { Provider } from "react-redux";
+import styled from 'styled-components';
 
-import store from './redux/store';
-import ClientView from './view/client';
+import TransactionsList from './page/TransactionsList';
 
 function App() {
   return (
-    <Provider store={store}>
-      <ClientView />
-    </Provider>
+    <Wrapper>
+      <TransactionsList />
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #eee;
+`;
 
 export default App;

@@ -3,18 +3,21 @@ import styled from "styled-components";
 
 import CardBalance from "../components/CardBalance";
 import DailyPoints from "../components/DailyPoints";
+import PaymentDue from "../components/PaymentDue";
 import Row from "../components/Row";
 import Col from "../components/Col";
 
 const TransactionsList = () => {
     return (
         <Wrapper>
-            <Row>
+            <Row gap="5px">
                 <Col gap="5px">
                     <CardBalance price={17.3} available={1482.7}/>
                     <DailyPoints />
                 </Col>
-                <Col>Shit</Col>
+                <Col>
+                    <PaymentDue />
+                </Col>
             </Row>
         </Wrapper>
     );

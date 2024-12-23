@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { getPrices } from "../utils/utils";
+import { getPrices } from "../assets/utils";
 
 interface CardBalanceProps {
     price: number | any;

@@ -6,27 +6,39 @@ import DailyPoints from "../components/DailyPoints";
 import PaymentDue from "../components/PaymentDue";
 import Row from "../components/Row";
 import Col from "../components/Col";
+import TxList from "../components/TxLIst";
 
 const TransactionsList = () => {
     return (
         <Wrapper>
-            <Row gap="5px">
-                <Col gap="5px">
-                    <CardBalance price={17.3} available={1482.7}/>
-                    <DailyPoints />
+                <Col gap="15px">
+                    <Row gap="5px">
+                        <Col gap="5px">
+                            <CardBalance price={17.3} available={1482.7}/>
+                            <DailyPoints />
+                        </Col>
+                        <Col>
+                            <PaymentDue />
+                        </Col>
+                    </Row>
+                    <Col gap="5px">
+                        <Title>Latest Transactions</Title>
+                        <TxList />
+                    </Col>
                 </Col>
-                <Col>
-                    <PaymentDue />
-                </Col>
-            </Row>
         </Wrapper>
     );
 };
 
 const Wrapper = styled.div`
     padding: 5px 10px;
-    width: 350px;
-    height: 500px;
+    width: 380px;
+    height: 700px;
+    overflow: auto;
+`;
+const Title = styled.div`
+    font-size: 18px;
+    font-weight: bold;
 `;
 
 export default TransactionsList;
